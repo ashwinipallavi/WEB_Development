@@ -1,0 +1,34 @@
+
+{% extends 'basic.html' %}
+
+{% block content %}
+<h1>Student detail page.</h1>
+
+<table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Department</th>
+        <th scope="col">Roll.number</th>
+        <th scope="col">College Name</th>
+        <th scope="col">ID</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+       
+      <tr>
+        
+        <td>{{object.name}}</td>
+        <td>{{object.department}}</td>
+        <td>{{object.rollnumber}}</td>
+        <td>{{object.college_name}}</td>
+        <td>{{object.id}}</td>
+        
+      </tr>
+     
+    </tbody>
+  </table>
+
+{% endblock %}
+

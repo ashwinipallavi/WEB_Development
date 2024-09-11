@@ -1,0 +1,37 @@
+
+{% extends 'basic.html' %}
+
+{% block content %}
+
+<h1>Student List page.</h1><br>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Year</th>
+        <th>Roll Number</th>
+        <th>Details</th>
+        <th>Update</th>
+        <th>Delete</th>
+        
+        
+    </tr>
+    {% for object in object_list %}
+            <tr>
+                <td>{{object.id}}</td>
+                <td>{{object.name}}</td>
+                <td> {{object.department}}</td>
+                <td>{{object.college_name}}</td>
+                <td> {{object.rollnumber}} </td>  
+                <td><a type="button" class="btn btn-primary" style="border-radius: 20px;" href= "{{object.id}}/detail">Detail</a></td>
+                <td><a type=" button " class = "btn btn-success" style="border-radius: 20px;" href ="{{object.id}}/update" >Update</a></td>
+                <td><a type = "button" class="btn btn-danger" style="border-radius: 20px;" href="{{object.id}}/delete">Delete</a></td>
+                                      
+            </tr>
+            
+    {% endfor %}
+
+</table>
+
+{% endblock %}

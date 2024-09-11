@@ -1,0 +1,15 @@
+
+{% extends 'basic.html' %}
+
+{% block content %}
+<h1>Student Application form page.</h1>
+
+<form action  = '', method = "post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type = "submit" value = "Submit" class = "btn btn-success" style = "border-radius: 20px;"><br><br><br><br><br><br>
+    
+</form> 
+
+{% endblock %}
+
